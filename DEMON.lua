@@ -45,13 +45,13 @@ local TokenBot = io.read()
 if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 if res ~= 200 then 
-print('\27[1;31m\nThe token is not valid, check it and then send it\n') 
+print('\27[1;31m\nThe token is not valid, check it and then send it\n\27[0;39;49m') 
 else 
-io.write('\27[1;36mThe bot token has been saved successfully\n27[0;39;49m') 
+io.write('\27[1;36mThe bot token has been saved successfully\n\27[0;39;49m') 
 Devmfm:set(Servermustafa.."Tokenmustafa",TokenBot) 
 end  
 else 
-print('\27[1;31m\nThe bot token was not saved, send it again\n') 
+print('\27[1;31m\nThe bot token was not saved, send it again\n\27[0;39;49m') 
 end  
 os.execute('lua DEMON.lua') 
 end 
