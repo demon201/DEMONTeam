@@ -3,8 +3,8 @@ THIS_DIR=$(cd $(dirname $0); pwd)
 Version=`lsb_release -rs | cut -f1 -d"."`
 install() {
 echo -e "\033[0;36m"
-echo -e "~ Welcome To Source DEMON - اهلا بك في سورس الشيطان ~"
-echo -e "  ~ { Setting Up Offices - جاري رفع المكاتب } ~"
+echo -e "~ Welcome To Source DEMON "
+echo -e "  ~ { Setting Up Offices "
 echo -e "\033[0m"
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -52,7 +52,6 @@ echo -e "    | |   ) || (      | |   | || |   | || | \   |"
 echo -e "    | (__/  )| (____/\| )   ( || (___) || )  \  |"
 echo -e "    (______/ (_______/|/     \|(_______)|/    )_)"
 echo -e ""
-echo -e "                𝕾𝕺𝖀𝕽𝕮𝕰 𝕯𝕰𝕸𝕺𝕹"
 echo -e "\033[0m"
 cd $THIS_DIR && sudo chmod +x tg
 lua DEMON.lua
