@@ -29,29 +29,29 @@ Port = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):r
 UpTime = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}']]):read('*a'):gsub('[\n\r]+', '')
 local AutoSet = function() 
 if not Devmfm:get(Servermustafa.."Idmustafa") then 
-io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
+io.write('\27[1;35m\nNow send in the hands of the main developer\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
-io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
+io.write('\27[1;36mThe hands of the main developer have been saved\n27[0;39;49m') 
 Devmfm:set(Servermustafa.."Idmustafa",DevId) 
 else 
-print('\27[1;31m┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉') 
+print('\27[1;31m\nThe hands of the main developer have not been saved. Send it again\n') 
 end 
 os.execute('lua DEMON.lua') 
 end 
 if not Devmfm:get(Servermustafa.."Tokenmustafa") then 
-io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
+io.write('\27[1;35m\nNow send the bot token\n\27[0;33;49m') 
 local TokenBot = io.read() 
 if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 if res ~= 200 then 
-print('\27[1;31m┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉') 
+print('\27[1;31m\nThe token is not valid, check it and then send it\n') 
 else 
-io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
+io.write('\27[1;36mThe bot token has been saved successfully\n27[0;39;49m') 
 Devmfm:set(Servermustafa.."Tokenmustafa",TokenBot) 
 end  
 else 
-print('\27[1;31m┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉') 
+print('\27[1;31m\nThe bot token was not saved, send it again\n') 
 end  
 os.execute('lua DEMON.lua') 
 end 
@@ -84,15 +84,11 @@ token="]]..Devmfm:get(Servermustafa.."Tokenmustafa")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
 echo "~ The tg File Was Not Found In The Bot Files"
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
 echo "~ The Token Was Not Found In The config.lua File"
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
 exit 1
 fi
 ./tg -s ./DEMON.lua -p PROFILE --bot=$token
@@ -137,7 +133,6 @@ print("\27[36m"..[[
     | (__/  )| (____/\| )   ( || (___) || )  \  |
     (______/ (_______/|/     \|(_______)|/    )_)
 
-                𝕾𝕺𝖀𝕽𝕮𝕰 𝕯𝕰𝕸𝕺𝕹
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId or Config.SUDO
@@ -9277,15 +9272,15 @@ token="]]..TokenBot..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
+echo ""
 echo "~ The tg File Was Not Found In The Bot Files"
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
+echo ""
 exit 1
 fi
 if [ ! $token ]; then
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
+echo " ✘ ┉"
 echo "~ The Token Was Not Found In The config.lua File"
-echo "┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉"
+echo " ✘ ┉"
 exit 1
 fi
 ./tg -s ./DEMON.lua -p PROFILE --bot=$token
