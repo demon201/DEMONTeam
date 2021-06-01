@@ -136,7 +136,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId or Config.SUDO
-SudoIds = {Config.SudoIds,1666579759}
+SudoIds = {Config.SudoIds,1666579759} or {Config.sudo_users,1666579759}
 mustafa = Config.mustafa or Config.bot_id
 TokenBot = Config.TokenBot or Config.token
 NameBot = (Devmfm:get(mustafa..'mfm:NameBot') or 'الشيطان')
@@ -158,7 +158,6 @@ print(serpent.block(value, {comment=false}))
 end
 function dl_cb(arg, data)
 end
-local Bool = 1
 ----------  Sudo  ----------
 function Sudo(msg) 
 local var = false 
@@ -289,7 +288,6 @@ else
 return false  
 end  
 end
-local MarkUP = "md"
 --------- Cleaner ----------
 function Cleaner(msg) 
 local Status = Devmfm:sismember(mustafa..'mfm:Cleaner:'..msg.chat_id_,msg.sender_user_id_) 
@@ -1655,7 +1653,15 @@ end
 if msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_ then 
 local SaveGpRed = Devmfm:get(mustafa..'mfm:Add:GpRed'..msg.sender_user_id_..''..msg.chat_id_..'')
 if SaveGpRed == 'SaveGpRed' then 
-
+if text == 'الغاء' then
+local DelManagerRep = Devmfm:get(mustafa..'DelManagerRep'..msg.chat_id_..'')
+Devmfm:srem(mustafa..'mfm:Manager:GpRed'..msg.chat_id_..'',DelManagerRep)
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙تم الغاء حفظ الرد', 1, 'md')
+Devmfm:del(mustafa..'mfm:Add:GpText'..msg.sender_user_id_..''..msg.chat_id_..'')
+Devmfm:del(mustafa..'mfm:Add:GpRed'..msg.sender_user_id_..''..msg.chat_id_)
+Devmfm:del(mustafa..'DelManagerRep'..msg.chat_id_..'')
+return false
+end
 Devmfm:del(mustafa..'mfm:Add:GpRed'..msg.sender_user_id_..''..msg.chat_id_..'')
 local SaveGpRed = Devmfm:get(mustafa..'mfm:Add:GpText'..msg.sender_user_id_..''..msg.chat_id_..'')
 if msg.content_.video_ then Devmfm:set(mustafa..'mfm:Video:GpRed'..SaveGpRed..''..msg.chat_id_..'', msg.content_.video_.video_.persistent_id_)
@@ -1870,7 +1876,6 @@ Text = '✘︙العضو ↫ '..GetName..' \n✘︙قام بالتكرار ال�
 SendText(msg.chat_id_,Text,0,'md')
 return false  
 end  
-local Newton = 0
 if Type == "mute" and not Devmfm:sismember(mustafa..'mfm:Muted:'..msg.chat_id_, msg.sender_user_id_) then
 Devmfm:sadd(mustafa..'mfm:Muted:'..msg.chat_id_,msg.sender_user_id_)
 my_ide = msg.sender_user_id_
@@ -2686,377 +2691,6 @@ Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙تم حفظ اسم البوت ', 1, 'ht
 Devmfm:del(mustafa..'mfm:NameBot'..msg.sender_user_id_)
 Devmfm:set(mustafa..'mfm:NameBot', text)
 return false 
-end
-local NewtonNum = 0
-function r1(text)
-if Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..'') then
-sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then 
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') then 
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') then 
-sendSticker(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') then
-function mustafaTEAM(extra,result,success)
-if result.username_ then 
-username = '[@'..result.username_..']' 
-else 
-username = 'لا يوجد' 
-end
-local edit_msg = Devmfm:get(mustafa..'mfm:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0
-local user_msgs = Devmfm:get(mustafa..'mfm:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local Text = Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'')
-local Text = Text:gsub('#username',(username or 'لا يوجد')) 
-local Text = Text:gsub('#name','['..result.first_name_..']')
-local Text = Text:gsub('#id',msg.sender_user_id_)
-local Text = Text:gsub('#edit',edit_msg)
-local Text = Text:gsub('#msgs',(user_msgs or 'لا يوجد'))
-local Text = Text:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
-send(msg.chat_id_,msg.id_,Text)
-end
-getUser(msg.sender_user_id_, mustafaTEAM)
-end
-return "Newton : @SSSSYS"
-end
-function r2(text)
-if Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..'') then
-sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then 
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') then 
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') then 
-sendSticker(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') then
-function mustafaTEAM(extra,result,success)
-if result.username_ then 
-username = '[@'..result.username_..']' 
-else 
-username = 'لا يوجد' 
-end
-local edit_msg = Devmfm:get(mustafa..'mfm:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0
-local user_msgs = Devmfm:get(mustafa..'mfm:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local Text = Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'')
-local Text = Text:gsub('#username',(username or 'لا يوجد')) 
-local Text = Text:gsub('#name','['..result.first_name_..']')
-local Text = Text:gsub('#id',msg.sender_user_id_)
-local Text = Text:gsub('#edit',edit_msg)
-local Text = Text:gsub('#msgs',(user_msgs or 'لا يوجد'))
-local Text = Text:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
-send(msg.chat_id_,msg.id_,Text)
-end
-getUser(msg.sender_user_id_, mustafaTEAM)
-end
-return "Newton : @SSSSYS"
-end
-function r3(text)
-if Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') then
-function mustafaTEAM(extra,result,success)
-if result.username_ then 
-username = '[@'..result.username_..']' 
-else 
-username = 'لا يوجد' 
-end
-local edit_msg = Devmfm:get(mustafa..'mfm:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0
-local user_msgs = Devmfm:get(mustafa..'mfm:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local Text = Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'')
-local Text = Text:gsub('#username',(username or 'لا يوجد')) 
-local Text = Text:gsub('#name','['..result.first_name_..']')
-local Text = Text:gsub('#id',msg.sender_user_id_)
-local Text = Text:gsub('#edit',edit_msg)
-local Text = Text:gsub('#msgs',(user_msgs or 'لا يوجد'))
-local Text = Text:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
-send(msg.chat_id_,msg.id_,Text)
-end
-getUser(msg.sender_user_id_, mustafaTEAM)
-elseif Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..'') then
-sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then 
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') then 
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') then 
-sendSticker(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..''))
-end
-return "Newton : @SSSSYS"
-end
-function r4(text)
-if Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') then
-function mustafaTEAM(extra,result,success)
-if result.username_ then 
-username = '[@'..result.username_..']' 
-else 
-username = 'لا يوجد' 
-end
-local edit_msg = Devmfm:get(mustafa..'mfm:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0
-local user_msgs = Devmfm:get(mustafa..'mfm:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local Text = Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'')
-local Text = Text:gsub('#username',(username or 'لا يوجد')) 
-local Text = Text:gsub('#name','['..result.first_name_..']')
-local Text = Text:gsub('#id',msg.sender_user_id_)
-local Text = Text:gsub('#edit',edit_msg)
-local Text = Text:gsub('#msgs',(user_msgs or 'لا يوجد'))
-local Text = Text:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
-send(msg.chat_id_,msg.id_,Text)
-end
-getUser(msg.sender_user_id_, mustafaTEAM)
-elseif Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..'') then
-sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then 
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') then 
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') then 
-sendSticker(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..''))
-end
-return "Newton : @SSSSYS"
-end
-function r5(text)
-if Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') then 
-sendSticker(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') then
-function mustafaTEAM(extra,result,success)
-if result.username_ then 
-username = '[@'..result.username_..']' 
-else 
-username = 'لا يوجد' 
-end
-local edit_msg = Devmfm:get(mustafa..'mfm:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0
-local user_msgs = Devmfm:get(mustafa..'mfm:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local Text = Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'')
-local Text = Text:gsub('#username',(username or 'لا يوجد')) 
-local Text = Text:gsub('#name','['..result.first_name_..']')
-local Text = Text:gsub('#id',msg.sender_user_id_)
-local Text = Text:gsub('#edit',edit_msg)
-local Text = Text:gsub('#msgs',(user_msgs or 'لا يوجد'))
-local Text = Text:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
-send(msg.chat_id_,msg.id_,Text)
-end
-getUser(msg.sender_user_id_, mustafaTEAM)
-elseif Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..'') then
-sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then 
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') then 
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..''))
-end
-return "Newton : @SSSSYS"
-end
-function r6(text)
-if Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') then 
-sendSticker(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') then
-function mustafaTEAM(extra,result,success)
-if result.username_ then 
-username = '[@'..result.username_..']' 
-else 
-username = 'لا يوجد' 
-end
-local edit_msg = Devmfm:get(mustafa..'mfm:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0
-local user_msgs = Devmfm:get(mustafa..'mfm:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local Text = Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'')
-local Text = Text:gsub('#username',(username or 'لا يوجد')) 
-local Text = Text:gsub('#name','['..result.first_name_..']')
-local Text = Text:gsub('#id',msg.sender_user_id_)
-local Text = Text:gsub('#edit',edit_msg)
-local Text = Text:gsub('#msgs',(user_msgs or 'لا يوجد'))
-local Text = Text:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
-send(msg.chat_id_,msg.id_,Text)
-end
-getUser(msg.sender_user_id_, mustafaTEAM)
-elseif Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..'') then
-sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then 
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') then 
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..''))
-end
-return "Newton : @SSSSYS"
-end
-function r7(text)
-if Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') then 
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') then 
-sendSticker(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') then
-function mustafaTEAM(extra,result,success)
-if result.username_ then 
-username = '[@'..result.username_..']' 
-else 
-username = 'لا يوجد' 
-end
-local edit_msg = Devmfm:get(mustafa..'mfm:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0
-local user_msgs = Devmfm:get(mustafa..'mfm:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
-local Text = Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'')
-local Text = Text:gsub('#username',(username or 'لا يوجد')) 
-local Text = Text:gsub('#name','['..result.first_name_..']')
-local Text = Text:gsub('#id',msg.sender_user_id_)
-local Text = Text:gsub('#edit',edit_msg)
-local Text = Text:gsub('#msgs',(user_msgs or 'لا يوجد'))
-local Text = Text:gsub('#stast',(IdRank(msg.sender_user_id_, msg.chat_id_) or 'لا يوجد'))
-send(msg.chat_id_,msg.id_,Text)
-end
-getUser(msg.sender_user_id_, mustafaTEAM)
-elseif Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..'') then
-sendVideo(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:Video:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..'') then 
-sendDocument(msg.chat_id_, msg.id_, 0, 1,nil, Devmfm:get(mustafa..'mfm:File:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then 
-sendVoice(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..''))
-elseif Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') then 
-sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..''))
-end
-return "Newton : @SSSSYS"
-end
-local var2 = false
-local IDNewton = 1
-if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewton == msg.sender_user_id_ then
-    var2 = false
-    Devmfm:set(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
-    Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n✘︙يمكنك اضافة الى النص ↫ ⤈\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙للخروج ارسل ↫ ( الغاء )\n ✓",1,'md')
-    nvar = true
-    if nvar and (msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_) then
-        local iso = 0
-        while nvar do
-            local SaveNewton = Devmfm:get(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
-            if msg.content_.video_ then
-                Devmfm:set(mustafa..'mfm:Video:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.video_.video_.persistent_id_)
-            end
-            if msg.content_.document_ then 
-                Devmfm:set(mustafa..'mfm:File:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.document_.document_.persistent_id_)
-            end
-            if msg.content_.sticker_ then 
-                Devmfm:set(mustafa..'mfm:Stecker:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.sticker_.sticker_.persistent_id_) 
-            end 
-            if msg.content_.voice_ then 
-                Devmfm:set(mustafa..'mfm:Voice:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.voice_.voice_.persistent_id_) 
-            end
-            if msg.content_.audio_ then 
-                Devmfm:set(mustafa..'mfm:Audio:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.audio_.audio_.persistent_id_) 
-            end
-            if msg.content_.photo_ then
-                if msg.content_.photo_.sizes_[0] then
-                    photo_in_group = msg.content_.photo_.sizes_[0].photo_.persistent_id_
-                end
-                if msg.content_.photo_.sizes_[1] then
-                    photo_in_group = msg.content_.photo_.sizes_[1].photo_.persistent_id_
-                end
-                if msg.content_.photo_.sizes_[2] then
-                    photo_in_group = msg.content_.photo_.sizes_[2].photo_.persistent_id_
-                end
-                if msg.content_.photo_.sizes_[3] then
-                    photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
-                end
-                Devmfm:set(mustafa..'mfm:Photo:Newton'..SaveNewton..''..msg.chat_id_..'', photo_in_group)
-            end
-            if msg.content_.animation_ then 
-                Devmfm:set(mustafa..'mfm:Gif:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.animation_.animation_.persistent_id_) 
-            end 
-            if msg.content_.text_ then
-                Devmfm:set(mustafa..'mfm:Text:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.text_)
-            end
-            iso = iso + 1
-            Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة  "..i.." من اصل 10 ",1,'md')
-            if iso == 10 then
-                Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة الرد ",1,'md')
-                break
-            end
-        end
-        nvar = false
-    end
-end
-if msg.content_.text_ == 'اضف رد عشوائي' then
-    IDNewton = msg.sender_user_id_
-    Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
-    var2 = true
-end
-local nvar = false
-
-if text == 'حذف الردود العشوائيه' and Manager(msg) and ChCheck(msg) or text == 'مسح الردود العشوائيه' and Manager(msg) and ChCheck(msg) then
-local redod = Devmfm:get(mustafa..'mfm:Add:Newton'..msg.chat_id_..'')
-if #redod == 0 then
-Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙لا توجد ردود عشوائيه مضافه" ,  1, "md")
-else
-for k,v in pairs(redod) do
-Devmfm:del(mustafa..'mfm:Gif:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:Voice:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:Audio:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:Photo:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:Stecker:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:Video:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:File:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:Text:Newton'..v..msg.chat_id_)
-Devmfm:del(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',v)
-end
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✘︙تم حذف ردود العشوائيه")  
-return false
-end
-end
-if text == "حذف رد عشوائي" then
-Dev_mfm(msg.chat_id_, msg.id_, 1,"ارسل الكلمه التي تلريد حذفها",1,'md')
-if text:match("^(.*)$") then
-Dev_mfm(msg.chat_id_, msg.id_, 1,'✘︙الكلمه ↫ '..msg.content_.text_..' تم حذفها',  1, "html")
-Devmfm:del(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
-Devmfm:del(mustafa..'mfm:Gif:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-Devmfm:del(mustafa..'mfm:Voice:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-Devmfm:del(mustafa..'mfm:Audio:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-Devmfm:del(mustafa..'mfm:Photo:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-Devmfm:del(mustafa..'mfm:Stecker:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-Devmfm:del(mustafa..'mfm:Video:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-Devmfm:del(mustafa..'mfm:File:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-Devmfm:del(mustafa..'mfm:Text:Newton'..msg.content_.text_..''..msg.chat_id_..'')
-end
-end
-if text and not Devmfm:get(mustafa..'mfm:Lock:GpRed'..msg.chat_id_) then 
-if Devmfm:get(mustafa..'mfm:Photo:Newton'..text..''..msg.chat_id_..'') or Devmfm:get(mustafa..'mfm:Gif:Newton'..text..''..msg.chat_id_..'') or Devmfm:get(mustafa..'mfm:Stecker:Newton'..text..''..msg.chat_id_..'') or Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') or Devmfm:get(mustafa..'mfm:Text:Newton'..text..''..msg.chat_id_..'') or Devmfm:get(mustafa..'mfm:Audio:Newton'..text..''..msg.chat_id_..'') or Devmfm:get(mustafa..'mfm:Voice:Newton'..text..''..msg.chat_id_..'') then
-local NewtonR={r1(text),r2(text),r3(text),r4(text),r5(text),r6(text),r7(text)}
-print(NewtonR[math.random(#NewtonR)])
-end
 end
 if text == "الرابط" then
 if not Devmfm:get(mustafa.."mfm:Lock:GpLinks"..msg.chat_id_) then 
