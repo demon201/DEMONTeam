@@ -2957,7 +2957,7 @@ if text == 'اضف رد عشوائي' then
 local IDNewton = msg.sender_user_id_
 Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ ارسل عدد الردود العشوائيه التي تريد اضافتها",1,'md')
 while true do
-if text <= 2 then
+if tonumber("9") >= 2 then
 Newton = msg.content_.text_
 break
 else
