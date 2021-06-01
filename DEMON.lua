@@ -2953,7 +2953,6 @@ sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newto
 end
 return "Newton : @SSSSYS"
 end
-local var = false
 local var2 = false
 local IDNewton = 1
 if msg.content_.text_ == 'اضف رد عشوائي' then
@@ -3008,8 +3007,8 @@ if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewto
                 Devmfm:set(mustafa..'mfm:Text:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.text_)
             end
             iso = iso + 1
-            Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة  "..i.." من اصل "..Newton,1,'md')
-            if i == Newton then
+            Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة  "..i.." من اصل 10 ",1,'md')
+            if iso == 10 then
                 Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة الرد ",1,'md')
                 break
             end
