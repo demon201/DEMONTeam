@@ -2955,12 +2955,6 @@ return "Newton : @SSSSYS"
 end
 local var2 = false
 local IDNewton = 1
-if msg.content_.text_ == 'اضف رد عشوائي' then
-    IDNewton = msg.sender_user_id_
-    Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
-    var2 = true
-end
-local nvar = false
 if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewton == msg.sender_user_id_ then
     var2 = false
     Devmfm:set(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
@@ -3016,6 +3010,13 @@ if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewto
         nvar = false
     end
 end
+if msg.content_.text_ == 'اضف رد عشوائي' then
+    IDNewton = msg.sender_user_id_
+    Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
+    var2 = true
+end
+local nvar = false
+
 if text == 'حذف الردود العشوائيه' and Manager(msg) and ChCheck(msg) or text == 'مسح الردود العشوائيه' and Manager(msg) and ChCheck(msg) then
 local redod = Devmfm:get(mustafa..'mfm:Add:Newton'..msg.chat_id_..'')
 if #redod == 0 then
