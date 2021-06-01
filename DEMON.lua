@@ -2953,69 +2953,79 @@ sendAudio(msg.chat_id_, msg.id_, 0, 1, nil, Devmfm:get(mustafa..'mfm:Audio:Newto
 end
 return "Newton : @SSSSYS"
 end
+local var = false
+local var2 = false
+local IDNewton = 1
 if text == 'اضف رد عشوائي' then
-local IDNewton = msg.sender_user_id_
-Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ ارسل عدد الردود العشوائيه التي تريد اضافتها",1,'md')
-while true do
-if tonumber("9") >= 2 then
-Newton = msg.content_.text_
-break
-else
-Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1",1,'md')
+    IDNewton = msg.sender_user_id_
+    Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ ارسل عدد الردود العشوائيه التي تريد اضافتها",1,'md')
+    while true do
+        if tonumber(msg.content_.text_) >= 2 and IDNewton == msg.sender_user_id_ then
+            Newton = msg.content_.text_
+            var = true
+            break
+        else
+            Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1",1,'md')
+        end
+    end
+    if var then
+        Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
+        var2 = true
+    end
 end
-end
-Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
-if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton then
-Devmfm:set(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
-Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n✘︙يمكنك اضافة الى النص ↫ ⤈\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙للخروج ارسل ↫ ( الغاء )\n ✓",1,'md')
-if msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_ then
-while true do
-local SaveNewton = Devmfm:get(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
-if msg.content_.video_ then
-Devmfm:set(mustafa..'mfm:Video:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.video_.video_.persistent_id_)
-end
-if msg.content_.document_ then 
-Devmfm:set(mustafa..'mfm:File:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.document_.document_.persistent_id_)
-end
-if msg.content_.sticker_ then 
-Devmfm:set(mustafa..'mfm:Stecker:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.sticker_.sticker_.persistent_id_) 
-end 
-if msg.content_.voice_ then 
-Devmfm:set(mustafa..'mfm:Voice:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.voice_.voice_.persistent_id_) 
-end
-if msg.content_.audio_ then 
-Devmfm:set(mustafa..'mfm:Audio:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.audio_.audio_.persistent_id_) 
-end
-if msg.content_.photo_ then
-if msg.content_.photo_.sizes_[0] then
-photo_in_group = msg.content_.photo_.sizes_[0].photo_.persistent_id_
-end
-if msg.content_.photo_.sizes_[1] then
-photo_in_group = msg.content_.photo_.sizes_[1].photo_.persistent_id_
-end
-if msg.content_.photo_.sizes_[2] then
-photo_in_group = msg.content_.photo_.sizes_[2].photo_.persistent_id_
-end
-if msg.content_.photo_.sizes_[3] then
-photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
-end
-Devmfm:set(mustafa..'mfm:Photo:Newton'..SaveNewton..''..msg.chat_id_..'', photo_in_group)
-end
-if msg.content_.animation_ then 
-Devmfm:set(mustafa..'mfm:Gif:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.animation_.animation_.persistent_id_) 
-end 
-if msg.content_.text_ then
-Devmfm:set(mustafa..'mfm:Text:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.text_)
-end
-i = i + 1
-Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة  "..i.." من اصل "..Newton,1,'md')
-if i == Newton then
-Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة الرد ",1,'md')
-break
-end
-end
-end
-end
+local nvar = false
+if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewton == msg.sender_user_id_ then
+    Devmfm:set(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
+    Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n✘︙يمكنك اضافة الى النص ↫ ⤈\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙للخروج ارسل ↫ ( الغاء )\n ✓",1,'md')
+    nvar = true
+    if nvar and (msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_) then
+        local iso = 0
+        while nvar do
+            local SaveNewton = Devmfm:get(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
+            if msg.content_.video_ then
+                Devmfm:set(mustafa..'mfm:Video:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.video_.video_.persistent_id_)
+            end
+            if msg.content_.document_ then 
+                Devmfm:set(mustafa..'mfm:File:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.document_.document_.persistent_id_)
+            end
+            if msg.content_.sticker_ then 
+                Devmfm:set(mustafa..'mfm:Stecker:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.sticker_.sticker_.persistent_id_) 
+            end 
+            if msg.content_.voice_ then 
+                Devmfm:set(mustafa..'mfm:Voice:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.voice_.voice_.persistent_id_) 
+            end
+            if msg.content_.audio_ then 
+                Devmfm:set(mustafa..'mfm:Audio:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.audio_.audio_.persistent_id_) 
+            end
+            if msg.content_.photo_ then
+                if msg.content_.photo_.sizes_[0] then
+                    photo_in_group = msg.content_.photo_.sizes_[0].photo_.persistent_id_
+                end
+                if msg.content_.photo_.sizes_[1] then
+                    photo_in_group = msg.content_.photo_.sizes_[1].photo_.persistent_id_
+                end
+                if msg.content_.photo_.sizes_[2] then
+                    photo_in_group = msg.content_.photo_.sizes_[2].photo_.persistent_id_
+                end
+                if msg.content_.photo_.sizes_[3] then
+                    photo_in_group = msg.content_.photo_.sizes_[3].photo_.persistent_id_
+                end
+                Devmfm:set(mustafa..'mfm:Photo:Newton'..SaveNewton..''..msg.chat_id_..'', photo_in_group)
+            end
+            if msg.content_.animation_ then 
+                Devmfm:set(mustafa..'mfm:Gif:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.animation_.animation_.persistent_id_) 
+            end 
+            if msg.content_.text_ then
+                Devmfm:set(mustafa..'mfm:Text:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.text_)
+            end
+            iso = iso + 1
+            Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة  "..i.." من اصل "..Newton,1,'md')
+            if i == Newton then
+                Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة الرد ",1,'md')
+                break
+            end
+        end
+    end
 end
 if text == 'حذف الردود العشوائيه' and Manager(msg) and ChCheck(msg) or text == 'مسح الردود العشوائيه' and Manager(msg) and ChCheck(msg) then
 local redod = Devmfm:get(mustafa..'mfm:Add:Newton'..msg.chat_id_..'')
