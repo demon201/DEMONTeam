@@ -2961,18 +2961,21 @@ if msg.content_.text_ == 'اضف رد عشوائي' then
     Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ ارسل عدد الردود العشوائيه التي تريد اضافتها",1,'md')
     local t = true
 end
-    if t and tonumber(msg.content_.text_) >= 2 and IDNewton == msg.sender_user_id_ then
-        Newton = msg.content_.text_
-        var = true
-    else
-        Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1",1,'md')
-    end
+if t and tonumber(text) >= 2 and IDNewton == msg.sender_user_id_ then
+    Newton = text
+    t = false
+    var = true
+else
+    Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1",1,'md')
+end
 if var then
     Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
+    var = false
     var2 = true
 end
 local nvar = false
 if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewton == msg.sender_user_id_ then
+    var2 = false
     Devmfm:set(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
     Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n✘︙يمكنك اضافة الى النص ↫ ⤈\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙للخروج ارسل ↫ ( الغاء )\n ✓",1,'md')
     nvar = true
@@ -3023,6 +3026,7 @@ if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewto
                 break
             end
         end
+        nvar == false
     end
 end
 if text == 'حذف الردود العشوائيه' and Manager(msg) and ChCheck(msg) or text == 'مسح الردود العشوائيه' and Manager(msg) and ChCheck(msg) then
