@@ -2964,7 +2964,6 @@ end
     if t and tonumber(msg.content_.text_) >= 2 and IDNewton == msg.sender_user_id_ then
         Newton = msg.content_.text_
         var = true
-        break
     else
         Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1",1,'md')
     end
