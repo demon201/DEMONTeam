@@ -2958,19 +2958,7 @@ local var2 = false
 local IDNewton = 1
 if msg.content_.text_ == 'اضف رد عشوائي' then
     IDNewton = msg.sender_user_id_
-    Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ ارسل عدد الردود العشوائيه التي تريد اضافتها",1,'md')
-    local t = true
-end
-if t and tonumber(text) >= 2 and IDNewton == msg.sender_user_id_ then
-    Newton = text
-    t = false
-    var = true
-else
-    Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1",1,'md')
-end
-if var then
     Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
-    var = false
     var2 = true
 end
 local nvar = false
