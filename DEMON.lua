@@ -3013,7 +3013,7 @@ if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton and var2 and IDNewto
                 break
             end
         end
-        nvar == false
+        nvar = false
     end
 end
 if text == 'حذف الردود العشوائيه' and Manager(msg) and ChCheck(msg) or text == 'مسح الردود العشوائيه' and Manager(msg) and ChCheck(msg) then
