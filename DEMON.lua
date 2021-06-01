@@ -359,7 +359,7 @@ end
 send(msg.chat_id_, msg.id_,FilesText)  
 end
 function SendT(text)
-Dev_mfm(msg.chat_id_, msg.id_, Bool,text,Bool,MarkUP)
+Dev_mfm(msg.chat_id_, msg.id_, 1,text,1,MarkUP)
 end
 function download_to_file(url, file_path) 
 local respbody = {} 
