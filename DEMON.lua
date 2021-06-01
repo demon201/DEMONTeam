@@ -358,9 +358,6 @@ end
 end
 send(msg.chat_id_, msg.id_,FilesText)  
 end
-function SendT(text)
-Dev_mfm(msg.chat_id_, msg.id_, 1,text,1,MarkUP)
-end
 function download_to_file(url, file_path) 
 local respbody = {} 
 local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
@@ -2958,19 +2955,19 @@ return "Newton : @SSSSYS"
 end
 if text == 'اضف رد عشوائي' then
 local IDNewton = msg.sender_user_id_
-SendT("✘︙ ارسل عدد الردود العشوائيه التي تريد اضافتها")
+Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ ارسل عدد الردود العشوائيه التي تريد اضافتها",1,'md')
 while true do
 if text <= 2 then
 Newton = msg.content_.text_
 break
 else
-SendT("✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1")
+Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ عذراَ عزيزي يجب ان يكون العدد كبر من 1",1,'md')
 end
 end
-SendT( "✘︙حسنا ارسل الكلمه الان ")
+Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حسنا ارسل الكلمه الان ",1,'md')
 if text:match("^(.*)$") and msg.sender_user_id_ == IDNewton then
 Devmfm:set(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
-SendT("✘︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n✘︙يمكنك اضافة الى النص ↫ ⤈\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙للخروج ارسل ↫ ( الغاء )\n ✓")
+Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ارسل لي الرد سواء كان ↫ ⤈\n❨ ملف • ملصق • متحركه • صوره\n • فيديو • بصمه • صوت • رساله ❩\n✘︙يمكنك اضافة الى النص ↫ ⤈\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد السحكات\n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙للخروج ارسل ↫ ( الغاء )\n ✓",1,'md')
 if msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_ then
 while true do
 local SaveNewton = Devmfm:get(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
@@ -3011,9 +3008,9 @@ if msg.content_.text_ then
 Devmfm:set(mustafa..'mfm:Text:Newton'..SaveNewton..''..msg.chat_id_..'', msg.content_.text_)
 end
 i = i + 1
-SendT("✘︙ تم اضافة  "..i.." من اصل "..Newton)
+Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة  "..i.." من اصل "..Newton,1,'md')
 if i == Newton then
-SendT("✘︙ تم اضافة الرد ")
+Dev_mfm(msg.chat_id_, msg.id_, 1,"✘︙ تم اضافة الرد ",1,'md')
 break
 end
 end
@@ -3041,7 +3038,7 @@ return false
 end
 end
 if text == "حذف رد عشوائي" then
-SendT("ارسل الكلمه التي تلريد حذفها")
+Dev_mfm(msg.chat_id_, msg.id_, 1,"ارسل الكلمه التي تلريد حذفها",1,'md')
 if text:match("^(.*)$") then
 Dev_mfm(msg.chat_id_, msg.id_, 1,'✘︙الكلمه ↫ '..msg.content_.text_..' تم حذفها',  1, "html")
 Devmfm:del(mustafa..'mfm:Add:Newton'..msg.chat_id_..'',msg.content_.text_)
