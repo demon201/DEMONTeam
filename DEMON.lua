@@ -7721,7 +7721,7 @@ if text and text:match("^برج (.*)$") and ChCheck(msg) or text and text:match(
 local TextBrg = text:match("^برج (.*)$") or text:match("^برجي (.*)$") 
 UrlBrg = https.request('https://apiabs.ml/brg.php?brg='..URL.escape(TextBrg)) 
 Brg = JSON.decode(UrlBrg) 
-t = Brg.ok.mfm  
+t = Brg.ok.abs  
 Dev_mfm(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
@@ -7835,7 +7835,7 @@ if text and text:match("^احسب (.*)$") and ChCheck(msg) or text and text:matc
 local TextAge = text:match("^احسب (.*)$") or text:match("^عمري (.*)$") 
 UrlAge = https.request('https://apiabs.ml/age.php?age='..URL.escape(TextAge)) 
 Age = JSON.decode(UrlAge) 
-t = Age.ok.mfm
+t = Age.ok.abs
 Dev_mfm(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
@@ -7854,7 +7854,7 @@ if text and text:match("^معنى الاسم (.*)$") and ChCheck(msg) or text an
 local TextMean = text:match("^معنى الاسم (.*)$") or text:match("^معنى اسم (.*)$") 
 UrlMean = https.request('https://apiabs.ml/Mean.php?Abs='..URL.escape(TextMean)) 
 Mean = JSON.decode(UrlMean) 
-t = Mean.ok.mfm
+t = Mean.ok.abs
 Dev_mfm(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
