@@ -2725,12 +2725,6 @@ name = math.random(#namebot)
 Dev_mfm(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'html') 
 return false 
 end
-function SendNewton(TexeS,TextN)
-if text == TextS then
-send(msg.chat_id,msg.id,TextN)
-end
-end
-
 if text =='نقاطي' and ChCheck(msg) then 
 if tonumber((Devmfm:get(mustafa..'mfm:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
 Dev_mfm(msg.chat_id_, msg.id_, 1,'✘︙لم تربح اي نقطه\n✘︙ارسل ↫ الالعاب للعب', 1, 'md')
