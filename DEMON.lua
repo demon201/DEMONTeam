@@ -3213,12 +3213,6 @@ Newton = "✾  هـﮩـڵا ہبـﮩـک "
 send(msg.chat_id_, msg.id_, Newton)
 return false
 end
-if text == 'تفعيل' then
-Newton = "يشتغل بدون تفعيل حمبي" then
-Newton = ]
-send(msg.chat_id_, msg.id_, Newton)
-return false
-end;}
 if text == "شكو ماكو" then
 Newton = "سلامتك"
 send(msg.chat_id_, msg.id_, Newton)
