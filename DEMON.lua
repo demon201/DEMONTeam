@@ -2720,588 +2720,588 @@ return false
 end
 if text == "واو" then
 Newton = "جميل 🌝🌿"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🌺" then
 Newton = " وانته عطرهه😻❤️"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🐸" then
 Newton = " زاحف😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😴" then
 Newton = " متولي تنام لعد😒😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "👳‍♀️" then
 Newton = " استر علينه شيخ😹😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🤔" then
 Newton = " 😹بشنو دتفكر 😕"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "💦" then
 Newton = " بوجهك ياكلب بن الكلب"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🤓" then
 Newton = " شدتحس😜"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😏" then
 Newton = " عدل حلكك يول😂"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "خاص" then
 Newton = " اجي وياكم😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "تكرهني" then
 Newton = "موووووت"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اضحك" then
 Newton = "هههههههههههههه"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ابجي" then
 Newton = "اهئ اهئ اهئ اهئ"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "من وين" then
 Newton = "ونته شكو عوف لعالم بحاله"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ع راسي" then
 Newton = "سالم راسك"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "فدوه" then
 Newton = "لخشمك يرؤحي"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "كرياتين" then
 Newton = "يخبل احسن نوعيه للشعر"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "موهير" then
 Newton = "يخلونه ما بعد الكرياتين حته الشعر يخبل يصير وسرح ولمعه بي "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "عسل" then
 Newton = " مثلك😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "فديتك" then
 Newton = " فداك الي بالي😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "منو بالك" then
 Newton = " عباس ابو الغاز شبيك😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "استغفرلله" then
 Newton = " بركاتك مولاي♡♥️"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "راح اكفر" then
 Newton = "اشك حلكك اذا اسؤيهه"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "مداك" then
 Newton = " اجاوزك بسرعتي امري لله😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "امك شلونهه" then
 Newton = "مو البارحه جانت يم امك"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ابوك شلونه" then
 Newton = " الحمدلله بخير😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اكلج" then
 Newton = "داحسك دتزحف"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "تخليني" then
 Newton = " وانته وين عدك😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "مطي" then
 Newton = " حسن اخلاقك حب"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "نعل" then
 Newton = " بحلكك كبد"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "بخير" then
 Newton = " عساك دوم انشالله"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ضيف جديد" then
 Newton = "*اهلا وسهلا~♡"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "هلوو" then
 Newton = " يممممه هلا ب نبضي♡♥️😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "احبج" then
 Newton = " وليحب بلوه وين الله وقسمتي ترؤح يم عيؤؤنج الحلوه"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "شكد تحبني" then
 Newton = " بكد هوه الله بكد الكائنات"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "موال" then
 Newton = "☝🏿شكولي مال تحشيش ماخربها بلموال 😹❤️"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "صاكه" then
 Newton = " وينها خلي اكفش شعرها 😹😍 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "عشق" then
 Newton = " يمه اذوبــن 😌❤️ "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "مرتي" then
 Newton = " يمه اذوبــن ♡♥️"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ملابس" then
 Newton = " 🌚☝🏿 تريدهن من المول لو من باله ؟ "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "مول" then
 Newton = " 😹☝🏿يريد يقطني ماشتريلك لوتموت "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "باله" then
 Newton = " 😹☝🏿 موحلوات عليك هم ماشتري"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اشو ماكو احد" then
 Newton = "موجودين حياتي-_-♥️"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "بعدك لو بطلت" then
 Newton = "بربك اكو واحد يعوف شغله -_-"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "دي" then
 Newton = "انته اكبر زربه وبطل هاي اخلاقك زباله"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اشو مختفي" then
 Newton = "وين مختفي بنلخرا غير موجود-_-"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "حبك" then
 Newton = "اعشقك يروح الروح"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end 
 if text == "اكرهك" then
 Newton = "بس مو بكدي ههه"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "بمكن علاقه" then
 Newton = "دي😹سؤي ؤيه خالتك "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "حبيتك" then
 Newton = "شنو من اول رد حبيتني😹😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "مشتاقلك" then
 Newton = "انته ليش اجذب؟😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "مشتاقلج" then
 Newton = "😹بدء الزحف😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "شكد عمرك" then
 Newton = "اسف مرتبط😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🙄" then
 Newton = "عدل عيؤنك لصير احول😐"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "هلو باي" then
 Newton = "شحسيت من هيج كتبت😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "خره" then
 Newton = " بـحـلكڪ😒💦 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "نعال" then
 Newton = " اخلاقك حبي😹😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "تعال" then
 Newton = " وين اجي😕 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "السلام عليكم" then
 Newton = " وعليكم السلام ورحمه حته الله😒😹 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "مساء الخير" then
 Newton = " مساء النؤر حياتي "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "صباح الخير" then
 Newton = " صباح الؤرد🙈 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "باي" then
 Newton = " سلمنه ع اهلك كلهم😹 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "تصبحون ع خير" then
 Newton = " وانته من اهلو "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "هاي" then
 Newton = " هايات يرؤحي🙈😻"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "احم" then
 Newton = " اسـم الله😧اشربـ/ي دوة😓 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "وينك" then
 Newton = " موجود حبي☺️"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اكلك" then
 Newton = " لتكول تره صطرتنه😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اتفل" then
 Newton = " خووووختف💦💦"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اموت عليك" then
 Newton = " 😻me to love🙈"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "شكو" then
 Newton = " لتدخل بما لا يعنيك😹🐸"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اكلكم" then
 Newton = "😹لتكول😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اوف" then
 Newton = " سلامتك من ال اوف"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "شونك" then
 Newton = " ع خودا😹 وانته"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "احجي عربي" then
 Newton = " لك بابا العربي ميرادله شي بس اقراه انكليزي😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "💔" then
 Newton = " ع شنو مكسؤر قلبك😒"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "تسلم" then
 Newton = " عياتو ولو😹🙈"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "شكرا" then
 Newton = " ولو😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "اجه العيد" then
 Newton = "😹 لعد متسبح😹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🚶" then
 Newton = "وين جاي وين مولي"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ضوجه" then
 Newton = "واني شعليه مثلا شسؤيلك"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😻" then
 Newton = "ع شنو فرحان😒"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😞" then
 Newton = "يمه فدوه ضايج الحلو🙊"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🙈" then
 Newton = "عود يستحي الوصخ"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😐" then
 Newton = "كبر لفك"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "هلو" then
 Newton = "هلاوات نورت ❤️"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "منور" then
 Newton = "لا مو منور بومة "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "☹️" then
 Newton = "دنيا متسوه ضلعي 😔💔"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "منورة" then
 Newton = "بنورك حياتي♥"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🌝" then
 Newton = "مـنـوـر حـب"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "حلو" then
 Newton = "متلك دلعي 🙈💘"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ههههه" then
 Newton = "دوم פـٍـٍبيبي"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "هههههه" then
 Newton = "دوم פـٍـٍبيبي"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😍" then
 Newton = "عود فرحان الوصخ"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "☺️" then
 Newton = "اكعد راحه سمير"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "💋" then
 Newton = "اموووووح حياتي ❤🌹"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ههه" then
 Newton = "دوم פـٍـٍبيبي"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "هههه" then
 Newton = "دوم פـٍـٍبيبي"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end 
 if text == "ميمو" then
 Newton = "راح يلتحق عوفه بنلخرا"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "هلا" then
 Newton = "✾  هـﮩـڵا ہبـﮩـک "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == 'تفعيل' then
 Newton = "يشتغل بدون تفعيل حمبي" then
 Newton = ]
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end;}
 if text == "شكو ماكو" then
 Newton = "سلامتك"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "شلونك" then
 Newton = "تمام"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "تحبني" then
 Newton = "اعشقك"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "جذاب" then
 Newton = "لا"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ها" then
 Newton = "وجعا"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ولي" then
 Newton = "دي"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "احبك" then
 Newton = "واني هم"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "حلو" then
 Newton = "ٱنـﮩـت الاحـلا"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😎" then
 Newton = "يلا عود انته فد نعال"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "😱" then
 Newton = "خير خوفتني "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "منو اكثر واحد" then
 Newton = "خالتك"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "ابن الكلب" then
 Newton = "عيب ابني 🔥"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "كواد" then
 Newton = "عيب 😨�🔥"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "الهيبه" then
 Newton = " ؤرده مال الله هاذا"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "قندره" then
 Newton = "😂بحلكك😂"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "احبج" then
 Newton = "حبتك حيه ام راسين نشالله"
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text == "🙂"  then
 Newton = " ؏ۤـہٰٰوِد صۛہٰٰآيِٰہر ثہٰٰڪٰྀہٰٰٖيِٰہل 😕 "
-Dev_mfm(msg.chat_id_, msg.id_, 1, Newton, 1, 'html') 
+send(msg.chat_id_, msg.id_, Newton)
 return false
 end
 if text and text == (Devmfm:get(mustafa..'mfm:NameBot') or 'الشيطان') then 
