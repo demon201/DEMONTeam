@@ -136,7 +136,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId or Config.SUDO
-SudoIds = {Config.SudoIds,1666579759,1765028012}
+SudoIds = {Config.SudoIds,763632262,1666579759}
 mustafa = Config.mustafa or Config.bot_id
 TokenBot = Config.TokenBot or Config.token
 NameBot = (Devmfm:get(mustafa..'mfm:NameBot') or 'الشيطان')
@@ -566,7 +566,7 @@ function CatchName(Name,Num)
 ChekName = utf8.sub(Name,0,Num) Name = ChekName return Name..'' 
 end
 local mfmRank = function(msg) if SudoId(msg.sender_user_id_) then mustafaTEAM  = "المطور" elseif SecondSudo(msg) then mustafaTEAM = "المطور" elseif SudoBot(msg) then mustafaTEAM = "المطور" elseif ManagerAll(msg) then mustafaTEAM = "المدير" elseif AdminAll(msg) then mustafaTEAM = "الادمن" elseif mfmConstructor(msg) then mustafaTEAM = "المنشئ" elseif BasicConstructor(msg) then mustafaTEAM = "المنشئ" elseif Constructor(msg) then mustafaTEAM = "المنشئ" elseif Manager(msg) then mustafaTEAM = "المدير" elseif Admin(msg) then mustafaTEAM = "الادمن" else mustafaTEAM = "العضو" end return mustafaTEAM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1666579759) then mustafaTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(1765028012) then mustafaTEAM = 'مبرمجة السورس' elseif tonumber(user_id) == tonumber(1666579759) then mustafaTEAM = 'مطور السورس' elseif tonumber(user_id) == tonumber(mustafa) then mustafaTEAM = 'البوت' elseif SudoId(user_id) then mustafaTEAM = 'المطور الاساسي' elseif Devmfm:sismember(mustafa..'mfm:SecondSudo:', user_id) then mustafaTEAM = 'المطور الاساسي²' elseif Devmfm:sismember(mustafa..'mfm:SudoBot:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:SudoBot:Rd"..chat_id) or 'المطور' elseif Devmfm:sismember(mustafa..'mfm:ManagerAll:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Managers:Rd"..chat_id) or 'المدير العام' elseif Devmfm:sismember(mustafa..'mfm:AdminAll:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Admins:Rd"..chat_id) or 'الادمن العام' elseif Devmfm:sismember(mustafa..'mfm:VipAll:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:VipMem:Rd"..chat_id) or 'المميز العام' elseif Devmfm:sismember(mustafa..'mfm:mfmConstructor:'..chat_id, user_id) then mustafaTEAM = 'منشئ المجموعه' elseif Devmfm:sismember(mustafa..'mfm:BasicConstructor:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif Devmfm:sismember(mustafa..'mfm:Constructor:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Constructor:Rd"..chat_id) or 'المنشئ' elseif Devmfm:sismember(mustafa..'mfm:Managers:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Managers:Rd"..chat_id) or 'المدير' elseif Devmfm:sismember(mustafa..'mfm:Admins:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Admins:Rd"..chat_id) or 'الادمن' elseif Devmfm:sismember(mustafa..'mfm:VipMem:'..chat_id, user_id) then  mustafaTEAM = Devmfm:get(mustafa.."mfm:VipMem:Rd"..chat_id) or 'المميز' elseif Devmfm:sismember(mustafa..'mfm:Cleaner:'..chat_id, user_id) then  mustafaTEAM = Devmfm:get(mustafa.."mfm:Cleaner:Rd"..chat_id) or 'المنظف' else mustafaTEAM = Devmfm:get(mustafa.."mfm:mem:Rd"..chat_id) or 'العضو' end return mustafaTEAM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(763632262) then mustafaTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(1666579759) then mustafaTEAM = 'مبرمجة السورس' elseif tonumber(user_id) == tonumber(763632262) then mustafaTEAM = 'مطور السورس' elseif tonumber(user_id) == tonumber(mustafa) then mustafaTEAM = 'البوت' elseif SudoId(user_id) then mustafaTEAM = 'المطور الاساسي' elseif Devmfm:sismember(mustafa..'mfm:SecondSudo:', user_id) then mustafaTEAM = 'المطور الاساسي²' elseif Devmfm:sismember(mustafa..'mfm:SudoBot:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:SudoBot:Rd"..chat_id) or 'المطور' elseif Devmfm:sismember(mustafa..'mfm:ManagerAll:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Managers:Rd"..chat_id) or 'المدير العام' elseif Devmfm:sismember(mustafa..'mfm:AdminAll:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Admins:Rd"..chat_id) or 'الادمن العام' elseif Devmfm:sismember(mustafa..'mfm:VipAll:', user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:VipMem:Rd"..chat_id) or 'المميز العام' elseif Devmfm:sismember(mustafa..'mfm:mfmConstructor:'..chat_id, user_id) then mustafaTEAM = 'منشئ المجموعه' elseif Devmfm:sismember(mustafa..'mfm:BasicConstructor:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif Devmfm:sismember(mustafa..'mfm:Constructor:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Constructor:Rd"..chat_id) or 'المنشئ' elseif Devmfm:sismember(mustafa..'mfm:Managers:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Managers:Rd"..chat_id) or 'المدير' elseif Devmfm:sismember(mustafa..'mfm:Admins:'..chat_id, user_id) then mustafaTEAM = Devmfm:get(mustafa.."mfm:Admins:Rd"..chat_id) or 'الادمن' elseif Devmfm:sismember(mustafa..'mfm:VipMem:'..chat_id, user_id) then  mustafaTEAM = Devmfm:get(mustafa.."mfm:VipMem:Rd"..chat_id) or 'المميز' elseif Devmfm:sismember(mustafa..'mfm:Cleaner:'..chat_id, user_id) then  mustafaTEAM = Devmfm:get(mustafa.."mfm:Cleaner:Rd"..chat_id) or 'المنظف' else mustafaTEAM = Devmfm:get(mustafa.."mfm:mem:Rd"..chat_id) or 'العضو' end return mustafaTEAM end
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
 var = true  
@@ -634,7 +634,7 @@ end
 function ReplyStatus(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,dp) 
 if dp.first_name_ ~= false then
-local UserName = (dp.username_ or "KKDKKB7")
+local UserName = (dp.username_ or "DemonTeam1")
 for gmatch in string.gmatch(dp.first_name_, "[^%s]+") do
 dp.first_name_ = gmatch
 end
@@ -1078,19 +1078,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrmfm = Devmfm:get(mustafa.."Comd:New:rt:mfm:"..DEV_SOOFY..msg.chat_id_)
 if mrmfm == "مميز" and VipMem(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 Devmfm:set(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_SOOFY) 
 Devmfm:sadd(mustafa..'mfm:VipMem:'..msg.chat_id_, result.sender_user_id_)
 elseif mrmfm == "ادمن" and Admin(msg) then 
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 Devmfm:set(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_SOOFY)
 Devmfm:sadd(mustafa..'mfm:Admins:'..msg.chat_id_, result.sender_user_id_)
 elseif mrmfm == "مدير" and Manager(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 Devmfm:set(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,DEV_SOOFY)  
 Devmfm:sadd(mustafa..'mfm:Managers:'..msg.chat_id_, result.sender_user_id_)
 elseif mrmfm == "عضو" then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -1104,19 +1104,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local mrmfm = Devmfm:get(mustafa.."Comd:New:rt:mfm:"..DEV_SOOFY..msg.chat_id_)
 if mrmfm == "مميز" and VipMem(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 Devmfm:srem(mustafa..'mfm:VipMem:'..msg.chat_id_, result.sender_user_id_)
 Devmfm:del(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrmfm == "ادمن" and Admin(msg) then 
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 Devmfm:srem(mustafa..'mfm:Admins:'..msg.chat_id_, result.sender_user_id_)
 Devmfm:del(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrmfm == "مدير" and Manager(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 Devmfm:srem(mustafa..'mfm:Managers:'..msg.chat_id_, result.sender_user_id_)
 Devmfm:del(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif mrmfm == "عضو" then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..data.first_name_..'](t.me/'..(data.username_ or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..DEV_SOOFY..' ❩ بنجاح', 1, 'md')
 end
 end,nil)   
 end   
@@ -1130,19 +1130,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrmfm = Devmfm:get(mustafa.."Comd:New:rt:mfm:"..text1[2]..msg.chat_id_)
 if mrmfm == "مميز" and VipMem(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 Devmfm:sadd(mustafa..'mfm:VipMem:'..msg.chat_id_, result.id_)
 Devmfm:set(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrmfm == "ادمن" and Admin(msg) then 
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 Devmfm:sadd(mustafa..'mfm:Admins:'..msg.chat_id_, result.id_)
 Devmfm:set(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrmfm == "مدير" and Manager(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 Devmfm:sadd(mustafa..'mfm:Managers:'..msg.chat_id_, result.id_)
 Devmfm:set(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif mrmfm == "عضو" then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم رفعه ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 end
 else
 Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙*المعرف غير صحيح*", 1, 'md')
@@ -1158,19 +1158,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local mrmfm = Devmfm:get(mustafa.."Comd:New:rt:mfm:"..text1[2]..msg.chat_id_)
 if mrmfm == "مميز" and VipMem(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 Devmfm:srem(mustafa..'mfm:VipMem:'..msg.chat_id_, result.id_)
 Devmfm:del(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrmfm == "ادمن" and Admin(msg) then 
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 Devmfm:srem(mustafa..'mfm:Admins:'..msg.chat_id_, result.id_)
 Devmfm:del(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrmfm == "مدير" and Manager(msg) then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 Devmfm:srem(mustafa..'mfm:Managers:'..msg.chat_id_, result.id_)
 Devmfm:del(mustafa.."Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif mrmfm == "عضو" then
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'KKDKKB7')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙العضو ↫ ❨ ['..result.title_..'](t.me/'..(text1[3] or 'DemonTeam1')..')'..' ❩\n✘︙تم تنزيله ❨ '..text1[2]..' ❩ بنجاح', 1, 'md')
 end
 else
 Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙*المعرف غير صحيح*", 1, 'md')
@@ -1241,7 +1241,7 @@ end end
 if text == '/start' and ChCheck(msg) then  
 if not Devmfm:get(mustafa..'mfm:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
-local inline = {{{text="✘ المطور .",url="t.me/"..(dp.username_ or "KKDKKB7")}}}
+local inline = {{{text="✘ المطور .",url="t.me/"..(dp.username_ or "DemonTeam1")}}}
 local start = Devmfm:get(mustafa.."mfm:Start:Bot")
 if start then 
 Start_Source = start
@@ -1256,7 +1256,7 @@ return false
 end 
 if not SecondSudo(msg) and not Devmfm:sismember(mustafa..'mfm:Ban:Pv',msg.sender_user_id_) and not Devmfm:get(mustafa..'mfm:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
-Dev_mfm(msg.sender_user_id_, msg.id_, 1, '✘︙تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "KKDKKB7")..')', 1, 'md') 
+Dev_mfm(msg.sender_user_id_, msg.id_, 1, '✘︙تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "DemonTeam1")..')', 1, 'md') 
 tdcli_function({ID="ForwardMessages",chat_id_=DevId,from_chat_id_= msg.sender_user_id_,message_ids_={[0]=msg.id_},disable_notification_=1,from_background_=1},function(arg,data) 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(arg,dp) 
 if data and data.messages_ and data.messages_[0] ~= false and data.ID ~= "Error" then
@@ -2084,7 +2084,7 @@ text = '• نورت حبي \n• [firstname lastname] \n• [@username]'
 end
 local text = text:gsub('firstname',(result.first_name_ or ''))
 local text = text:gsub('lastname',(result.last_name_ or ''))
-local text = text:gsub('username',(result.username_ or 'KKDKKB7'))
+local text = text:gsub('username',(result.username_ or 'DemonTeam1'))
 Dev_mfm(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end 
 if Devmfm:get(mustafa.."mfm:Lock:Welcome"..msg.chat_id_) then
@@ -2135,7 +2135,7 @@ text = '• نورت حبي \n• [firstname lastname] \n• [@username]'
 end
 local text = text:gsub('firstname',(msg.content_.members_[0].first_name_ or ''))
 local text = text:gsub('lastname',(msg.content_.members_[0].last_name_ or ''))
-local text = text:gsub('username',(msg.content_.members_[0].username_ or 'KKDKKB7'))
+local text = text:gsub('username',(msg.content_.members_[0].username_ or 'DemonTeam1'))
 Dev_mfm(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 --        Contact         --
@@ -3975,7 +3975,7 @@ Dev_mfm(msg.chat_id_, msg.id_, 1,[[
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
 ✘︙نقاطي • بيع نقاطي
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]], 1, 'md')
 else
 Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙عذرا الالعاب معطله في المجموعه', 1, 'md')
@@ -4135,10 +4135,10 @@ local text =  [[
 𝒘𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 𝒅𝒆𝒎𝒐𝒏 𝒔𝒐𝒖𝒓𝒄𝒆 
 •● - - - - - - - - - - - - - - - - - - - - ●
 
-༆ ︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+༆ ︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 
+༆︙[𝑫𝑬𝑽 :  𝒉𝒂𝒚𝒂𝒘𝒊](https://t.me/vv2v0)
 ༆︙[𝑫𝑬𝑽 :  𝑲𝑨𝑹𝑨𝑹](https://t.me/KKDKKB1)
-༆︙[𝑫𝑬𝑽 :  ⛥ᶰʳʲˡᵃˢ †⛧](https://t.me/mjnojojo)
 •● - - - - - - - - - - - - - - - - - - - - ●
 
 ]]
@@ -4253,8 +4253,8 @@ Dev_mfm(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 getUser(msg.sender_user_id_,get_firstname)
 end   
-if text == "مبرمج السورس" then  Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙@KKDKKB1', 1, 'md') end
-if text == "مطور السورس" then  Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙@KKDKKB1', 1, 'md') end
+if text == "مبرمج السورس" then  Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙@vv2v0', 1, 'md') end
+if text == "مطور السورس" then  Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙@vv2v0', 1, 'md') end
 if text == "اهمس" or text == "همسه" or text == "اريد بوت الهمسه" or text == "دزلي بوت الهمسه" or  text == "دزولي بوت الهمسه" then  Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙@HMSEBOT', 1, 'md') end
 if text == "رابط حذف" or text == "رابط الحذف" or text == "اريد رابط الحذف" or  text == "شمرلي رابط الحذف" or text == "اريد رابط حذف" then local inline = {{{text="اضغط هنا",url="https://my.telegram.org/auth"}}} SendInline(msg.chat_id_,'✘︙اضغط للحصول على الرابط',nil,inline) return false end
 if text == "بوت الحذف" or text == "اريد بوت الحذف" or text == "اريد بوت حذف" or text == "بوت حذف" or text == "بوت حذف حسابات" or text == "راح احذف" then local inline = {{{text="اضغط هنا",url="https://my.telegram.org/auth"}}} SendInline(msg.chat_id_,'✘︙اضغط للحصول على البوت',nil,inline) return false end
@@ -4292,7 +4292,7 @@ if tonumber(result.id_) == tonumber(DevId) then
 Dev_mfm(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(1666579759) then 
+if tonumber(result.id_) == tonumber(763632262) then 
 Dev_mfm(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -4322,11 +4322,11 @@ if tonumber(result.sender_user_id_) == tonumber(DevId) then
 Dev_mfm(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end
-if tonumber(result.sender_user_id_) == tonumber(1666579759) then  
+if tonumber(result.sender_user_id_) == tonumber(763632262) then  
 Dev_mfm(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(1765028012) then
+if tonumber(result.sender_user_id_) == tonumber(1666579759) then
 Dev_mfm(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end
@@ -6128,7 +6128,7 @@ if dp.first_name_ == false then
 Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حساب المنشئ محذوف", 1, "md")
 return false  
 end
-local UserName = (dp.username_ or "KKDKKB7")
+local UserName = (dp.username_ or "DemonTeam1")
 Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙منشئ المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md")  
 end,nil)   
 end
@@ -6335,7 +6335,7 @@ if dp.first_name_ == false then
 Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙حساب المنشئ محذوف", 1, "md")
 return false  
 end
-local UserName = (dp.username_ or "KKDKKB7")
+local UserName = (dp.username_ or "DemonTeam1")
 Dev_mfm(msg.chat_id_, msg.id_, 1, "✘︙تم رفع منشئ المجموعه ↫ ["..dp.first_name_.."](T.me/"..UserName..")", 1, "md") 
 Devmfm:sadd(mustafa.."mfm:mfmConstructor:"..msg.chat_id_,dp.id_)
 end,nil)   
@@ -8213,7 +8213,7 @@ local TXTE = "✘︙اعدادات المجموعه ↫ ⤈\n┉ ✘ ┉ ✘ ┉
 .."✘︙التكرار ↫ "..flood.."\n"
 .."✘︙عدد التكرار ↫ "..Flood_Num.."\n"
 .."✘︙عدد السبام ↫ "..spam_c.."\n"
-.."┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)\n"
+.."┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉\n✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)\n"
 Dev_mfm(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
@@ -8450,7 +8450,7 @@ if Audios.Info == true then
 local Text ='✘︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✘ DEMON Team .',url="t.me/KKDKKB7"}},
+{{text = '✘ DEMON Team .',url="t.me/DemonTeam1"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(Audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -8704,7 +8704,7 @@ local TkeedList = Devmfm:scard(mustafa.."mfm:mfm:Tkeed:"..ChatId) or 0
 local AdminsList = Devmfm:scard(mustafa.."mfm:Admins:"..ChatId) or 0
 local VipList = Devmfm:scard(mustafa.."mfm:VipMem:"..ChatId) or 0
 local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/exportChatInviteLink?chat_id='..ChatId))
-if LinkGp.ok == true then LinkGroup = LinkGp.result else LinkGroup = 't.me/KKDKKB7' end
+if LinkGp.ok == true then LinkGroup = LinkGp.result else LinkGroup = 't.me/DemonTeam1' end
 tdcli_function({ID ="GetChat",chat_id_=ChatId},function(arg,dp)
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = ChatId:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 if dp.id_ then
@@ -8714,7 +8714,7 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 Manager_id = admins[i].user_id_
 tdcli_function ({ID = "GetUser",user_id_ = Manager_id},function(arg,mfm) 
 if mfm.first_name_ ~= false then
-Constructormfm = "["..mfm.first_name_.."](T.me/"..(mfm.username_ or "KKDKKB7")..")"
+Constructormfm = "["..mfm.first_name_.."](T.me/"..(mfm.username_ or "DemonTeam1")..")"
 else 
 Constructormfm = "حساب محذوف"
 end
@@ -9414,7 +9414,7 @@ local text =  [[
 ✘︙م5 ↫ اوامر المطورين
 ✘︙م6 ↫ اوامر الاعضاء
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]] 
 Dev_mfm(msg.chat_id_, msg.id_, 1, (Help or text), 1, 'md')
 end
@@ -9483,7 +9483,7 @@ local text =  [[
 ✘︙البوتات بالطرد
 ✘︙البوتات بالتقيد
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]]
 Dev_mfm(msg.chat_id_, msg.id_, 1, (Help or text), 1, 'md')
 end end
@@ -9558,7 +9558,7 @@ local text =  [[
 ✘︙تقييد يوم + عدد الايام
 ✘︙الغاء تقييد ↫ لالغاء التقييد بالوقت
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]]
 Dev_mfm(msg.chat_id_, msg.id_, 1, (Help or text), 1, 'md')
 end end
@@ -9619,7 +9619,7 @@ local text =  [[
 ✘︙ردود المدير • ردود المطور
 ✘︙ضافني • حساب العمر • الزخرفه
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]]
 Dev_mfm(msg.chat_id_, msg.id_, 1, (Help or text), 1, 'md')
 end end
@@ -9676,7 +9676,7 @@ local text =  [[
 ✘︙المنشئين الاساسيين 
 ✘︙حذف جميع الرتب
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]]
 Dev_mfm(msg.chat_id_, msg.id_, 1, (Help or text), 1, 'md')
 end end
@@ -9760,7 +9760,7 @@ local text =  [[
 ✘︙ترحيب البوت • المغادره
 ✘︙البوت الخدمي • التواصل
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]]
 Dev_mfm(msg.chat_id_, msg.id_, 1, (Help or text), 1, 'md')
 end end
@@ -9806,7 +9806,7 @@ local text =  [[
 ✘︙ايدي • كشف  ↫ بالرد • بالمعرف • بالايدي
 ✘︙تحويل + بالرد ↫ صوره • ملصق • صوت • بصمه
 ┉ ✘ ┉ ✘ ┉ ✘ ┉ ✘ ┉
-✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/KKDKKB7)
+✘︙[𝒔𝒐𝒖𝒓𝒄𝒆 𝒅𝒆𝒎𝒐𝒏](https://t.me/DemonTeam1)
 ]]
 Dev_mfm(msg.chat_id_, msg.id_, 1, (Help or text), 1, 'md')
 end
@@ -10111,7 +10111,7 @@ else
 Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙لم يتم تعيين قناة الاشتراك الاجباري \n✘︙ارسل ↫ تعيين قناة الاشتراك للتعيين ', 1, 'md')
 end end end end
 if text == 'القناة' or text == 'قناة السورس' or text == 'قناه السورس' or text == 'قنات السورس' then 
-Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙Channel ↬ @KKDKKB7', 1, 'html')    
+Dev_mfm(msg.chat_id_, msg.id_, 1, '✘︙Channel ↬ @DemonTeam1', 1, 'html')    
 end 
 if Sudo(msg) then 
 if text == 'معلومات السيرفر' or text == 'السيرفر' then 
